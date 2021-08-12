@@ -1,0 +1,42 @@
+<!-- <mat-card
+  style="width: 300px"
+  (click)="onCardClick()"
+  *ngIf="sessionNumber !== 0"
+>
+  <mat-card-title>
+    Curso de {{ title | textReducer: 5:{ text: "asd" }:"hola":"sad" }}
+    Curso de {{ title }}
+  </mat-card-title>
+  <mat-card-content
+    ><p appChangeColor="green">
+      Session {{ sessionNumber }} de Everis-angular
+    </p></mat-card-content
+  >
+</mat-card> -->
+<!-- <ng-template [ngIf]="sessionNumber === 0">
+  <mat-card style="width: 300px" (click)="onCardClick()">
+    <mat-card-title>
+      Curso de {{ title | textReducer: 5:{ text: "asd" }:"hola":"sad" }} Curso
+      de {{ title }}
+    </mat-card-title>
+    <mat-card-content
+      ><p appChangeColor="green">
+        Session {{ sessionNumber }} de Everis-angular
+      </p></mat-card-content
+    >
+  </mat-card>
+</ng-template> -->
+<mat-card style="width: 300px" (click)="onCardClick()">
+  <mat-card-title>
+    Curso de {{ title | textReducer: 5:{ text: "asd" }:"hola":"sad" }} Curso de
+    {{ title }}
+  </mat-card-title>
+  <mat-card-content
+    ><p appChangeColor="green">
+      Session {{ sessionNumber }} de Everis-angular
+    </p></mat-card-content
+  >
+  <button (click)="asc()">+</button>
+  <button (click)="desc()">-</button>
+  <p>{{ size }}</p>
+</mat-card>

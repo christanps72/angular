@@ -1,0 +1,10 @@
+<p>home works!</p>
+
+<div>
+  <div *ngIf="!characterList">Cargando...</div>
+  <ng-container *ngIf="characterList">
+    <div *ngFor="let character of characterList">
+      <img [src]="character.image" />
+    </div>
+  </ng-container>
+</div>

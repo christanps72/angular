@@ -1,0 +1,25 @@
+<div style="display: flex; flex-direction: column; gap: 10px">
+  <!-- <app-course
+    *ngFor="let course of courses; let index = index"
+    [sessionNumber]="index"
+    [title]="course.title"
+    (onCourseClick)="courseClick($event)"
+  ></app-course> -->
+  <!-- <mat-card style="width: 300px" >
+    <mat-card-title>Curso de angular </mat-card-title>
+    <mat-card-content>Session {{ course }} de Everis-angular</mat-card-content>
+  </mat-card> -->
+  <p>{{ parrafo }}</p>
+  <app-course
+    [(size)]="size"
+    [sessionNumber]="sNumber"
+    [title]="title"
+    (onCourseClick)="courseClick($event)"
+  ></app-course>
+
+  <input [(ngModel)]="size" type="number" />
+  <button (click)="showInputValue()">Mostrar valor</button>
+
+  <button (click)="changeTitleAndSessionNumber()">Cambiar título</button>
+  <button (click)="changeParrafo()">Cambiar párrafo</button>
+</div>
